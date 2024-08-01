@@ -1,4 +1,4 @@
-name: DKYPPI
+name: MIPPIS
 channels:
   - salilab
   - https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge
@@ -58,4 +58,4 @@ dependencies:
       - torchvision==0.14.0+cu117
       - typing-extensions==4.5.0
       - urllib3==1.26.14
-prefix: /home/aita130/anaconda3/envs/DKYPPI
+prefix: /home/anaconda3/envs/MIPPIS
