@@ -187,7 +187,7 @@ class BiLSTMModel(nn.Module):
 
         self.lstm_layers = nn.ModuleList()
         for i in range(num_layers):
-            input_size_layer = input_size if i == 0 else 2 * hidden_size  # 双向LSTM输入维度为hidden_size*2
+            input_size_layer = input_size if i == 0 else 2 * hidden_size  
             self.lstm_layers.append(nn.LSTM( input_size_layer, hidden_size=hidden_size, batch_first=True, bidirectional=True))
 
         self.dropout_layers = nn.ModuleList([nn.Dropout(p=dropout) for _ in range(num_layers)])
@@ -233,7 +233,7 @@ class MIPPIS(nn.Module):
         x = torch.cat((x1, x), dim=1) 
       
         x = x.float()
-        output = self.deep_gcn(x, adj)  # output.shape = (seq_len, NUM_CLASSES)
+        output = self.deep_gcn(x, adj) 
      
         output1 = self.BiLSTMModel(onehot)
 
